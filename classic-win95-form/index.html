@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <div class="wrapper__form">
+      <form action="" id="registerForm">
+        <h2 class="form__title">Register</h2>
+
+        <div class="form__group">
+          <input
+            type="text"
+            placeholder="Name"
+            id="registerForm__name"
+            autocomplete="off"
+            required
+          />
+        </div>
+
+        <div class="form__group">
+          <input
+            type="email"
+            placeholder="Email"
+            id="registerForm__email"
+            autocomplete="off"
+            required
+          />
+        </div>
+
+        <div class="form__group">
+          <input
+            type="password"
+            placeholder="Password"
+            id="registerForm__password"
+            autocomplete="off"
+            required
+          />
+        </div>
+
+        <div class="form__group">
+          <input
+            type="password"
+            placeholder="Confirm password"
+            id="registerForm__Confirmpassword"
+            autocomplete="off"
+            required
+          />
+        </div>
+
+        <div class="form__group flex" style="align-items:center;">
+          <input type="checkbox" id="registerForm__consent" />
+          <label for="registerForm__consent" style="margin-left:8px;">
+            I agree to the terms and conditions
+          </label>
+        </div>
+
+        <div class="form__group">
+          <div>Please select communication methods (at least one):</div>
+          <div class="flex" style="gap:12px; margin-top:8px;">
+            <div>
+              <input type="checkbox" id="comm_email" name="communication_checkbox_group" class="communication-checkbox" />
+              <label for="comm_email">Email</label>
+            </div>
+            <div>
+              <input type="checkbox" id="comm_sms" name="communication_checkbox_group" class="communication-checkbox" />
+              <label for="comm_sms">SMS</label>
+            </div>
+            <div>
+              <input type="checkbox" id="comm_phone" name="communication_checkbox_group" class="communication-checkbox" />
+              <label for="comm_phone">Phone call</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form__group">
+          <div>Please select preferred contact method:</div>
+          <div class="flex" style="gap:12px; margin-top:8px;">
+            <div>
+              <input type="radio" id="radio_email" name="communication_radio_group" />
+              <label for="radio_email">Email</label>
+            </div>
+            <div>
+              <input type="radio" id="radio_text" name="communication_radio_group" />
+              <label for="radio_text">Text Message</label>
+            </div>
+          </div>
+        </div>
+
+        <button id="registerForm__send" type="submit">Register</button>
+        <button id="registerForm__showPass" type="button">Show password</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

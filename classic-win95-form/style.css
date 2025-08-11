@@ -1,0 +1,112 @@
+body {
+  font-family: Tahoma, Verdana, sans-serif;
+  background: #008080; /* фон как в Windows 95 — можно оставить */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Окно формы с типичной 3D рамкой Win95 */
+.wrapper__form {
+  background: #c0c0c0;
+  border: 2px solid #fff;
+  border-right-color: #404040;
+  border-bottom-color: #404040;
+  width: 420px;
+  box-shadow: none;
+  border-radius: 0;
+  box-sizing: border-box;
+  padding: 8px;
+  /* для эффекта выдавленности */
+}
+
+/* Заголовок окна — с эффектом "заголовка Win95" */
+.wrapper__form::before {
+  content: "Form - Homework";
+  display: block;
+  background: #000080;
+  color: white;
+  font-weight: bold;
+  padding: 2px 6px;
+  font-size: 14px;
+  border: 2px solid #fff;
+  border-right-color: #404040;
+  border-bottom-color: #404040;
+  margin-bottom: 8px;
+  user-select: none;
+}
+
+/* Заголовок формы */
+.form__title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  margin: 12px 0;
+  text-align: center;
+  text-shadow: 1px 1px #fff;
+}
+
+/* Группы полей */
+.form__group {
+  margin-bottom: 16px;
+}
+
+/* Инпуты — с классическим Win95 3D бордером */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 4px 6px;
+  font-size: 12px;
+  background: #fff;
+  border: 2px solid #fff;
+  border-right-color: #404040;
+  border-bottom-color: #404040;
+  box-sizing: border-box;
+  color: #000;
+  outline: none;
+}
+
+/* Эффект фокуса — инверсия рамки */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border: 2px solid #000080;
+  border-right-color: #404080;
+  border-bottom-color: #404080;
+  outline: none;
+}
+
+/* Кнопки с классическим Win95 эффектом */
+button {
+  background: #c0c0c0;
+  border: 2px solid #fff;
+  border-right-color: #404040;
+  border-bottom-color: #404040;
+  padding: 4px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  color: #000;
+  box-shadow: none;
+  margin-right: 8px;
+  user-select: none;
+  transition: none;
+}
+
+button:hover {
+  border: 2px solid #404040;
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+  background: #e0e0e0;
+}
+
+button:last-child {
+  margin-right: 0;
+}
+
+/* Убираем тултипы JustValidate */
+.just-validate-tooltip-container {
+  display: none !important;
+}
